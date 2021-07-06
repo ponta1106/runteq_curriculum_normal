@@ -5,21 +5,15 @@
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
   </head>
+
   <body>
     <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>
-
-    <div>
-      <p id="notice"><%= flash[:notice] %></p>
-      <p id="alert"><%= flash[:alert] %></p>
-    </div>
-
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= render 'shared/flash_message' %>
+    <%= yield %>
     <%= render 'shared/footer' %>
   </body>
 </html>
