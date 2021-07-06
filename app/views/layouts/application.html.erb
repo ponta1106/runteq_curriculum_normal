@@ -1,19 +1,25 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>PostAppSorcery</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>SoceryTest</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
   </head>
-
   <body>
-    <%= render 'shared/header' %>
-    <%# render 'shared/before_login_header' %>
-    <%= render 'shared/flash_message' %>
-    <%= yield %>
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+
+    <div>
+      <p id="notice"><%= flash[:notice] %></p>
+      <p id="alert"><%= flash[:alert] %></p>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>
