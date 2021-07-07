@@ -1,4 +1,5 @@
-<%= form_with(model: user, local: true) do |f| %>
+<h1><%= t '.title' %></h1>
+<%= form_with model: user, local: true do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,13 +13,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, class: 'form-control' %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, class: 'form-control' %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
   </div>
 
   <div class="form-group">
@@ -37,7 +38,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "ユーザー登録", class: 'btn btn-block btn-primary' %>
+    <%= f.submit (t 'users.new.create'), class: 'btn btn-primary' %>
   </div>
 <% end %>
-
+<div class='text-center'>
+  <%= link_to (t '.to_login_page'), login_path %>
+</div>
