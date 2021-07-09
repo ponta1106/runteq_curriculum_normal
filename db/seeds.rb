@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do |n|
+  title = Faker::JapaneseMedia::Conan.character
+  body = Faker::JapaneseMedia::DragonBall.character
+  Board.create!(title: title,
+               body: body,
+               user_id: 1
+               )
+end

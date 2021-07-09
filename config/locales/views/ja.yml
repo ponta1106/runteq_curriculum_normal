@@ -203,6 +203,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    message:
+      require_login: 'ログインしてください'
   users:
     new:
       title: 'ユーザー登録'
@@ -224,9 +226,13 @@ ja:
   posts:
     new:
       create: '新規投稿'
+  board:
+    title: 'タイトル'
+    body: '本文'
   boards:
     index:
       title: '掲示板一覧'
+      no_result: '掲示板がありません。'
     new:
       title: '掲示板作成'
     bookmarks:

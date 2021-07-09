@@ -1,6 +1,8 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
-
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,12 +11,12 @@
       <ul class="navbar-nav ml-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Post
+            <%= Board.model_name.human %>
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to 'Post一覧', posts_path, class: 'dropdown-item' %>
-            <%= link_to 'Post作成', new_post_path, class: 'dropdown-item' %>
+            <%= link_to t('boards.index.title'), boards_path, class: 'dropdown-item' %>
+            <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
           </div>
         </li>
 
