@@ -204,6 +204,8 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     message:
+      created: '掲示板を作成しました'
+      not_created: '掲示板を作成できませんでした'
       require_login: 'ログインしてください'
   users:
     new:
@@ -227,8 +229,8 @@ ja:
     new:
       create: '新規投稿'
   board:
-    title: 'タイトル'
-    body: '本文'
+    new:
+      create: '掲示板を新規作成'
   boards:
     index:
       title: '掲示板一覧'
