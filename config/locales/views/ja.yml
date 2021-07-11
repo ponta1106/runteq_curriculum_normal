@@ -225,9 +225,6 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
-  posts:
-    new:
-      create: '新規投稿'
   board:
     new:
       create: '掲示板を新規作成'
@@ -242,3 +239,6 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+  comment:
+    new:
+     create: 'コメントを投稿'
