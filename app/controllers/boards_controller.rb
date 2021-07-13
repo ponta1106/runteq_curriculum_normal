@@ -1,7 +1,12 @@
 class BoardsController < ApplicationController
+  before_action :set_my_board, only: %i[edit update destroy]
 
   def index
     @boards = Board.all.includes(:user).order(created_at: :desc)
+  end
+
+  def bookmarks
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
   end
 
   def show
@@ -24,7 +29,26 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit; end
+  
+  def update
+    if @board.update(board_params)
+      redirect_to board_path(@board), success: '掲示板を更新しました'
+    else
+      render :edit, danger: '掲示板を更新できませんでした'
+    end
+  end
+  
+  def destroy
+    @board.destroy!
+    redirect_to boards_path, success: '掲示板を削除しました'
+  end
+  
   private
+  
+  def set_my_board
+    @board = current_user.boards.find(params[:id])
+  end
 
   def board_params
     params.require(:board).permit(:title, :body, :image, :image_cache)

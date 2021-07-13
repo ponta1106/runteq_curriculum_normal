@@ -225,17 +225,26 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
-  board:
-    new:
-      create: '掲示板を新規作成'
   boards:
     index:
       title: '掲示板一覧'
       no_result: '掲示板がありません。'
+    show:
+      title: '掲示板詳細'
     new:
       title: '掲示板作成'
+      submit: '決定'
+    edit:
+      title: '掲示板編集'
+      submit: '掲示板を更新する'
     bookmarks:
       title: 'ブックマーク一覧'
+      no_result: 'ブックマーク中の掲示板がありません。'
+  bookmarks:
+    create:
+      success: 'ブックマークしました'
+    destroy:
+      success: 'ブックマークを外しました'
   profiles:
     show:
       title: 'プロフィール'
