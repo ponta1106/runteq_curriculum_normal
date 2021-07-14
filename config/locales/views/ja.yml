@@ -207,6 +207,7 @@ ja:
       created: '掲示板を作成しました'
       not_created: '掲示板を作成できませんでした'
       require_login: 'ログインしてください'
+      delete_confirm: '削除しますか？'
   users:
     new:
       title: 'ユーザー登録'
