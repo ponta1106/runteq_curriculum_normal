@@ -1,4 +1,5 @@
 class Board < ApplicationRecord
+  paginates_per 20
   mount_uploader :image, ImageUploader
   belongs_to :user
   has_many :comments, dependent: :destroy
