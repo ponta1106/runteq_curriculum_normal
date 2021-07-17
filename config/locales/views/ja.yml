@@ -202,6 +202,8 @@ ja:
   defaults:
     login: 'ログイン'
     register: '登録'
+    post: '投稿'
+    search_word: '検索ワード'
     logout: 'ログアウト'
     message:
       created: '掲示板を作成しました'
