@@ -210,6 +210,9 @@ ja:
       not_created: '掲示板を作成できませんでした'
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
+      edit: '編集'
+      updated: 'ユーザーを更新しました'
+      not_updated: 'ユーザーを更新できませんでした'
   users:
     new:
       title: 'ユーザー登録'
@@ -251,6 +254,8 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
   comment:
     new:
      create: 'コメントを投稿'
