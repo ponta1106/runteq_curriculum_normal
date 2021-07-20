@@ -204,9 +204,11 @@ ja:
     register: '登録'
     post: '投稿'
     search_word: '検索ワード'
+    edit: '編集'
+    password_reset: 'パスワードリセット'
     logout: 'ログアウト'
     message:
-      created: '掲示板を作成しました'
+      created: '%{item}を作成しました'
       not_created: '掲示板を作成できませんでした'
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
@@ -259,3 +261,14 @@ ja:
   comment:
     new:
      create: 'コメントを投稿'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
