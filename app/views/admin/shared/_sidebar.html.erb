@@ -2,38 +2,40 @@
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
    <!-- Brand Logo -->
    <a href="index3.html" class="brand-link">
-     <%= image_tag 'sample.jpg', class: 'brand-image img-circle elevation-3' %>
+     <%= image_tag 'AdminLTELogo-92af06833886bd48cb14b00faa6d70220b3eb7a651f12c5d6f38501ac910dd6b.png', class: 'brand-image img-circle elevation-3' %>
      <span class="brand-text font-weight-light">AdminLTE 3</span>
    </a>
- 
+
    <!-- Sidebar -->
    <div class="sidebar">
      <!-- Sidebar user panel (optional) -->
      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
        <div class="image">
-         <%= image_tag current_user.avatar_url, class: 'img-circle elevation-2' %>
+        <%= link_to admin_user_path(current_user) do%>
+         <%= image_tag current_user.avatar.url, class: 'img-circle elevation-2' %>
+        <% end %>
        </div>
        <div class="info">
-         <a href="#" class="d-block"><%= current_user.decorate.full_name %></a>
+        <%= link_to current_user.decorate.full_name, admin_user_path(current_user) %></a>
        </div>
      </div>
- 
+
      <!-- Sidebar Menu -->
      <nav class="mt-2">
        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
          <li class="nav-item">
-           <%= link_to '#', class: "nav-link" do %>
+           <%= link_to admin_boards_path, class: "nav-link #{active_if('admin/boards')}" do %>
              <i class="nav-icon far fa-file"></i>
              <p>
-               掲示板
+               <%= t('admin.boards.index.title') %>
              </p>
            <% end %>
          </li>
          <li class="nav-item">
-           <%= link_to '#', class: "nav-link" do %>
+           <%= link_to admin_users_path, class: "nav-link #{active_if('admin/users')}" do %>
              <i class="nav-icon far fa-user"></i>
              <p>
-               ユーザー
+               <%= t('admin.users.index.title') %>
              </p>
            <% end %>
          </li>

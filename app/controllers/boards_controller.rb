@@ -37,7 +37,8 @@ class BoardsController < ApplicationController
     if @board.update(board_params)
       redirect_to board_path(@board), success: '掲示板を更新しました'
     else
-      render :edit, danger: '掲示板を更新できませんでした'
+      flash.now[:danger] = 'できませんでした'
+      render :edit
     end
   end
   

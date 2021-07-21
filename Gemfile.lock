@@ -128,6 +128,8 @@ GEM
       dry-core (~> 0.5, >= 0.5)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.10.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
@@ -396,6 +398,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config (= 2.0.0)
   draper
+  enum_help (= 0.0.17)
   factory_bot_rails
   faker
   font-awesome-sass (~> 5.11.2)
